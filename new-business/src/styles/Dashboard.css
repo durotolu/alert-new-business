@@ -1,0 +1,198 @@
+.dashboard {
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.dashboard ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.dashboard li {
+  padding: 1rem;
+  background-color: #f9f9f9;
+  margin: 1rem 0;
+  border-radius: 5px;
+}
+
+.switch-container {
+  display: inline-block;
+  width: 109px;
+  height: 34px;
+  position: relative;
+}
+
+.switch {
+  width: 109px;
+  height: 34px;
+  background-color: #C8C8C8; /* Gray background for off state */
+  border-radius: 17px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.switch .circle {
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  transition: left 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
+}
+
+.switch-container.active .switch {
+  background-color: #00C46C; /* Green background for on state */
+}
+
+.switch-container.active .circle {
+  left: calc(100% - 26px); /* Move to the right */
+}
+
+.switch-container.active .switch path {
+  fill: #00C46C; /* Change path color */
+}
+
+/* Optional for adding icon text inside */
+.switch svg {
+  position: absolute;
+  top: 5px;
+  left: 50px;
+}
+
+.dashboard__header__toggle {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.dashboard__content {
+  width: 100%;
+}
+
+.dashboard__content__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dashboard__content__date {
+  color: var(--Subtext, rgba(153, 153, 156, 1));
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.36px;
+  letter-spacing: -0.02em;
+  text-align: right;
+}
+
+.dashboard__content__actions, .dashboard__content__actions__buttons{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dashboard__content__currencies{
+  gap: 4px;
+}
+
+.dashboard__content__actions__currency_active {
+  padding: 11px 16px 11px 16px;
+  border-radius: 100px;
+  background: rgba(52, 52, 51, 1);
+  color: rgba(255, 255, 255, 1);
+  font-family: Ojah Display;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 19.72px;
+}
+
+.dashboard__content__actions__currency {
+  padding: 11px 16px 11px 16px;
+  border-radius: 100px;
+  color: rgba(180, 180, 180, 1);
+  font-family: Ojah Display;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 19.72px;
+}
+
+.dashboard__content__actions__buttons {
+  gap: 16px;
+}
+
+.dashboard__content__actions__button {
+  padding: 11px 16px 11px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(226, 227, 229, 1);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 20.57px;
+  letter-spacing: -0.02em;
+}
+
+.ellipsis {
+  padding: 11px 20px;
+}
+
+.add_money {
+  background: linear-gradient(0deg, #625BF6, #625BF6),
+  linear-gradient(0deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05));
+  color: var(--BG, rgba(255, 255, 255, 1));
+}
+
+.dashboard_stat {
+  gap: 20px;
+  text-align: left;
+}
+
+.stat_header {
+  color: var(--Subtext, rgba(153, 153, 156, 1));
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.36px;
+  letter-spacing: -0.02em;
+  align-items: center;
+  display: flex;
+  gap: 2px;
+}
+
+.stat_value {
+  color: var(--Text, rgba(52, 52, 51, 1));
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 38.73px;
+  letter-spacing: -0.02em;
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+
+.percentage {
+  color: var(--Success, rgba(0, 196, 108, 1));
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.36px;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+}
+
+.loss {
+  color: var(--Warn, rgba(255, 78, 78, 1));
+}
+
+.dashboard_stats {
+  display: flex;
+  justify-content: space-between;
+}
