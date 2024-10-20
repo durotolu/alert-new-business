@@ -1,0 +1,116 @@
+/* Modal overlay (background) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Aligns the modal to the bottom */
+  z-index: 1000;
+}
+
+/* Modal content (the modal itself) */
+.modal-content {
+  width: 100%;  /* Full width */
+  max-height: 90vh; /* Almost reaches the top */
+  background: white;
+  border-radius: 15px 15px 0 0;  /* Rounded top corners */
+  /* padding: 20px; */
+  box-shadow: 0px -4px 15px rgba(0, 0, 0, 0.2);
+  animation: rise-up 0.3s ease-out; /* Smooth rise animation */
+  padding-bottom: 138px;
+}
+
+/* Animation for rising up the modal */
+@keyframes rise-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.modal_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 32px 24px 32px;
+  margin-bottom: 55px;
+}
+
+.modal_header_right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 41.77px;
+  letter-spacing: -0.02em;
+  color: var(--Text, rgba(52, 52, 51, 1));
+  max-width: 440px;
+}
+
+.form {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 440px;
+}
+
+.add-business-form {
+  gap: 28px;
+  display: grid;
+  color: var(--Color-txt-Placeholder, rgba(180, 180, 180, 1));
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+span {
+  color: var(--Warn, rgba(255, 78, 78, 1));
+}
+
+select, input {
+  height: 48px;
+  padding: 12px 20px;
+  border-radius: 16px;
+  opacity: 0px;
+  background-color: rgba(250, 250, 251, 1);
+  color: var(--Color-txt-Placeholder, rgba(180, 180, 180, 1));
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: -0.014em;
+  text-align: left;
+}
+
+select {
+  height: 48px;
+  max-width: 440px;
+  width: 100%;
+}
+
+input {
+  height: 24px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.name_bottom {
+  text-align: right;
+  font-size: 13px;
+}
+
+.inputs_bottom {
+  display: flex;
+}
