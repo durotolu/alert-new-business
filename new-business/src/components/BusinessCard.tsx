@@ -32,9 +32,9 @@ const BusinessCard = () => {
             <path
               d="M11.7101 5.18159L9.02846 2.5L6.34716 5.1813M11.648 12.8184L8.9664 15.5L6.2851 12.8187"
               stroke="#6F6F6F"
-              stroke-width="1.6"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="1.6"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
         </button>
@@ -64,8 +64,8 @@ const BusinessCard = () => {
               <path
                 d="M21 14.874V27.1259M14.874 21H27.126"
                 stroke="#B4B4B4"
-                stroke-width="2.8875"
-                stroke-linecap="round"
+                strokeWidth="2.8875"
+                strokeLinecap="round"
               />
             </svg>
             Add a Business

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../styles/Modal.css";
 import AddBusinessForm from "./AddBusinessForm";
+import Cards from "./Cards";
 
 const Modal = ({
   isOpen,
@@ -9,7 +10,7 @@ const Modal = ({
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
 }) => {
-  // const [isOpen, setIsOpen] = useState(false);
+  const [isForm, setIsForm] = useState(false);
 
   // const openModal = () => {
   //   setIsOpen(true);
@@ -52,9 +53,9 @@ const Modal = ({
                       width="13.5361"
                       height="13.2413"
                       filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
+                      colorInterpolationFilters="sRGB"
                     >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feFlood floodOpacity="0" result="BackgroundImageFix" />
                       <feColorMatrix
                         in="SourceAlpha"
                         type="matrix"
@@ -96,15 +97,27 @@ const Modal = ({
                   <path
                     d="M22.5 22.5L17.9998 17.9998M17.9998 17.9998L13.5005 13.5005M17.9998 17.9998L22.4995 13.5M17.9998 17.9998L13.5 22.4995"
                     stroke="#99999C"
-                    stroke-width="2.4"
-                    stroke-linecap="round"
+                    strokeWidth="2.4"
+                    strokeLinecap="round"
                   />
                 </svg>
               </button>
             </div>
             <div className="form">
-              <h2>Provide some info about your business</h2>
-              <AddBusinessForm />
+              {isForm ? (
+                <>
+                  <h2>Provide some info about your business</h2>
+                  <AddBusinessForm setIsForm={setIsForm} closeModal={closeModal} />
+                </>
+              ) : (
+                <>
+                  <h2>What kind of account do you want to open?</h2>
+                  <p className="note">
+                    You can always add another account later on.
+                  </p>
+                  <Cards setIsForm={setIsForm} />
+                </>
+              )}
             </div>
           </div>
         </div>

@@ -1,0 +1,31 @@
+.bar-chart-container {
+  width: 100%;
+  /* padding: 20px; */
+  margin-top: 44px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.radio-buttons label {
+  margin-right: 20px;
+  font-size: 16px;
+}
+
+.radio-buttons input[type="radio"] {
+  margin-right: 8px;
+}
+
+.filter-dropdown select {
+  padding: 5px 10px;
+  font-size: 16px;
+  border-top: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.bar-chart {
+  margin-top: 20px;
+}

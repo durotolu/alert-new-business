@@ -1,5 +1,4 @@
 .dashboard {
-  padding: 2rem;
   text-align: center;
   display: flex;
   flex-direction: row;
@@ -75,7 +74,16 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  /* width: 100%; */
+  padding: 24px 28px;
+}
+
+h1 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.36px;
+  letter-spacing: -0.02em;
+  text-align: left;
 }
 
 .dashboard__content {
@@ -195,4 +203,10 @@ header {
 .dashboard_stats {
   display: flex;
   justify-content: space-between;
+}
+
+.dashboard__content__cont {
+  padding: 4px 80px;
+  gap: 40px;
+  display: grid;
 }
