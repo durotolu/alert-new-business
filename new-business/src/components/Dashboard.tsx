@@ -21,7 +21,7 @@ const Dashboard = () => {
         <Header />
         <div className="dashboard__content__cont">
           <div className="dashboard__content__header">
-            <h2>Good Afternoon, {businesses?.[0]?.name || "Payshiga"}</h2>
+            <h2>Good Afternoon, {businesses?.name || "Payshiga"}</h2>
             <div className="dashboard__content__date">
               Monday, January 23, 2023
             </div>

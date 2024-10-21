@@ -10,11 +10,18 @@ interface Business {
 }
 
 interface BusinessState {
-  businesses: Business[];
+  businesses: Business;
 }
 
 const initialState: BusinessState = {
-  businesses: [],
+  businesses: {
+    id: '',
+    name: '',
+    type: '',
+    industry: '',
+    size: '',
+    volume: ''
+  },
 };
 
 const businessSlice = createSlice({
@@ -22,7 +29,7 @@ const businessSlice = createSlice({
   initialState,
   reducers: {
     addBusiness: (state, action: PayloadAction<Business>) => {
-      state.businesses.push(action.payload);
+      state.businesses = action.payload;
     },
   },
 });

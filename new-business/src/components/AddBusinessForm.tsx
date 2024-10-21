@@ -30,7 +30,6 @@ const AddBusinessForm = ({
   };
 
   useEffect(() => {
-    // Check if all form fields are filled
     const isValid =
       formData.type !== "" &&
       formData.name !== "" &&
@@ -44,7 +43,6 @@ const AddBusinessForm = ({
     e.preventDefault();
     console.log("Form Data:", formData); // Log the form data
     dispatch(addBusiness({ ...formData, id: Date.now().toString() }));
-    // navigate("/");
     closeModal();
   };
 
